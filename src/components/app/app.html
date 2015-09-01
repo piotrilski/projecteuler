@@ -1,9 +1,16 @@
-<span>App:</span>
 <nav>
+  
   <ul>
-    <li><a router-link="home" href="#home">Home</a></li>    
+    <li>
+      <a [router-link]="['/home']">Home</a>
+    </li>
+    <li>
+      <a [router-link]="['/fibonacci-even-numbers']">Fibonacci Even Numbers</a>
+    </li>        
   </ul>
+  
 </nav>
+
 <main>
   <router-outlet></router-outlet>
 </main>

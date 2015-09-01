@@ -1,7 +1,8 @@
-import { Component, View, bootstrap, CORE_DIRECTIVES } from 'angular2/angular2';
+import { Component, View, CORE_DIRECTIVES } from 'angular2/angular2';
 import { Router, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
 
 import { Home } from '../home/home';
+import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbers.controller';
 
 @Component({
 	selector: 'app'
@@ -14,9 +15,13 @@ import { Home } from '../home/home';
 	]
 })
 @RouteConfig([
-	{ path: '/', as: 'home', component: Home }
+	{ path: '', redirectTo: '/home'},
+	{ path: '/home', as: 'home', component: Home },
+	{ path: '/fibonacci-even-numbers', as: 'fibonacci-even-numbers', component: FibonacciEvenNumbers}
 ])
 
 export class App {
-	constructor(){}
+	constructor()	{
+		
+	}
 }

@@ -47,13 +47,18 @@ gulp.task('serve', ['libs', 'html', 'js'], function () {
     var connect = require('connect');
     var serveStatic = require('serve-static');
     var open = require('open');
-
+    var modRewrite = require('connect-modrewrite');
     var port = 9000, app;
 
     gulp.watch(PATHS.src.html, ['html']);
     gulp.watch(PATHS.src.js, ['js']);
 
-    app = connect().use(serveStatic(__dirname + '/dist'));  // serve everything that is static
+    app = connect()
+        .use(modRewrite([
+            '!\\.html|\\.js|\\.css|\\.png$ /index.html [L]'
+        ]))
+        .use(serveStatic(__dirname + '/dist'));
+        
     http.createServer(app).listen(port, function () {
         open('http://localhost:' + port);
     });

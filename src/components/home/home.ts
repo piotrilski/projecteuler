@@ -6,6 +6,7 @@ import {Component, View, bootstrap, CORE_DIRECTIVES} from 'angular2/angular2';
 @View({
 	templateUrl: './components/home/home.html'	
 })
+
 export class Home {
 	constructor() {
 		

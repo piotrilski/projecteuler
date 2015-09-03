@@ -3,7 +3,8 @@ import { Router, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
 import { LocationStrategy, Location, HTML5LocationStrategy, HashLocationStrategy } from 'angular2/router'
 
 import { Home } from '../home/home';
-import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbers.controller';
+import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbers';
+import { LargestPrimeFactor } from '../largestPrimeFactor/largestPrimeFactor';
 
 @Component({
 	selector: 'app'
@@ -18,7 +19,8 @@ import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbe
 @RouteConfig([
 	{ path: '', redirectTo: '/fibonacci-even-numbers'},
 	{ path: '/home', as: 'home', component: Home },
-	{ path: '/fibonacci-even-numbers', as: 'fibonacci-even-numbers', component: FibonacciEvenNumbers}
+	{ path: '/fibonacci-even-numbers', as: 'fibonacci-even-numbers', component: FibonacciEvenNumbers},
+	{ path: '/largest-prime-factor', as: 'largest-prime-factor', component: LargestPrimeFactor}
 ])
 
 export class App {

@@ -1,10 +1,9 @@
 import { Component, View, CORE_DIRECTIVES } from 'angular2/angular2';
 import { TrialDivision } from '../../services/primeNumbersService';
-import { Inject } from 'angular2/di';
 
 @Component({
     selector: 'largestPrimeFactor',
-	injectables: [TrialDivision]
+	injectables: [ TrialDivision ]
 })
 @View({	
     templateUrl: './components/largestPrimeFactor/largestPrimeFactor.html'
@@ -12,13 +11,20 @@ import { Inject } from 'angular2/di';
 
 
 export class LargestPrimeFactor {
-	private _trialDivision: TrialDivision;	
+	private _trialDivision : TrialDivision;	
+	isPrime : boolean;
 	
-	constructor(trialDivision: TrialDivision){
+	constructor(trialDivision: TrialDivision) {
+		this.isPrime = false;
 		this._trialDivision = trialDivision;
-		
-		var prime = this._trialDivision.isPrime(121);
-		console.log(prime);
 	}
+	
+	isNumberPrime(givenNumber: number) {
+		console.log("given N: ", givenNumber);
 		
+		if(givenNumber && givenNumber % 1 === 0) {
+			this.isPrime = this._trialDivision.isPrime(121);
+		}				
+	}
+
 }

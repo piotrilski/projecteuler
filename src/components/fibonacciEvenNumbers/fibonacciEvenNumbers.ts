@@ -73,7 +73,7 @@ module Fibonacci {
 				while(true) {
 					var nextEl = this.buildElement(fibonacciNumbers[index-2],fibonacciNumbers[index-1]);
 					
-					if(nextEl >= givenNumber || index>100) {
+					if(nextEl >= givenNumber) {
 						break;
 					}
 					

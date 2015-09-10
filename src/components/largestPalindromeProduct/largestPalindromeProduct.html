@@ -21,3 +21,23 @@
 	</div>
 </div>
 
+<div>
+	<h3>Largest palindrome product of:</h3>
+	<div>
+		<input #numberofdigits>
+		<button (click)="getLargestPalindrome(numberofdigits.value)">
+			Get largest palindrome number
+		</button>
+		<p *ng-if="largestPalindrome">
+			Largest palindrome number is: <strong>{{ largestPalindrome }}</strong>		
+		</p>
+	</div>
+	<div>
+		<ul>
+			<li *ng-for="#palindrome of palindromes">
+				<span>{{ palindrome.palindrome }}</span>
+				<span> ({{ palindrome.firstFactor }} x {{ palindrome.secondFactor }})</span>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -19,11 +19,9 @@ export class LargestPrimeFactor {
 		this._trialDivision = trialDivision;
 	}
 	
-	isNumberPrime(givenNumber: number) {
-		console.log("given N: ", givenNumber);
-		
+	isNumberPrime(givenNumber: number) {		
 		if(givenNumber && givenNumber % 1 === 0) {
-			this.isPrime = this._trialDivision.isPrime(121);
+			this.isPrime = this._trialDivision.isPrime(givenNumber);
 		}				
 	}
 

@@ -5,6 +5,7 @@ import { LocationStrategy, Location, HTML5LocationStrategy, HashLocationStrategy
 import { Home } from '../home/home';
 import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbers';
 import { LargestPrimeFactor } from '../largestPrimeFactor/largestPrimeFactor';
+import { LargestPalindromeProduct } from '../largestPalindromeProduct/largestPalindromeProduct';
 
 @Component({
 	selector: 'app'
@@ -17,10 +18,11 @@ import { LargestPrimeFactor } from '../largestPrimeFactor/largestPrimeFactor';
 	]
 })
 @RouteConfig([
-	{ path: '', redirectTo: '/fibonacci-even-numbers'},
+	{ path: '', redirectTo: '/largestPalindromeProduct'},
 	{ path: '/home', as: 'home', component: Home },
 	{ path: '/fibonacci-even-numbers', as: 'fibonacci-even-numbers', component: FibonacciEvenNumbers},
-	{ path: '/largest-prime-factor', as: 'largest-prime-factor', component: LargestPrimeFactor}
+	{ path: '/largest-prime-factor', as: 'largest-prime-factor', component: LargestPrimeFactor},
+	{ path: '/largestPalindromeProduct', as: 'largest-palindrome-product', component: LargestPalindromeProduct}
 ])
 
 export class App {

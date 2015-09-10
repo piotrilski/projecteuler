@@ -6,6 +6,7 @@ import { Home } from '../home/home';
 import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbers';
 import { LargestPrimeFactor } from '../largestPrimeFactor/largestPrimeFactor';
 import { LargestPalindromeProduct } from '../largestPalindromeProduct/largestPalindromeProduct';
+import { SmallestMultiple } from '../smallestMultiple/smallestMultiple';
 
 @Component({
 	selector: 'app'
@@ -22,7 +23,8 @@ import { LargestPalindromeProduct } from '../largestPalindromeProduct/largestPal
 	{ path: '/home', as: 'home', component: Home },
 	{ path: '/fibonacci-even-numbers', as: 'fibonacci-even-numbers', component: FibonacciEvenNumbers},
 	{ path: '/largest-prime-factor', as: 'largest-prime-factor', component: LargestPrimeFactor},
-	{ path: '/largestPalindromeProduct', as: 'largest-palindrome-product', component: LargestPalindromeProduct}
+	{ path: '/largestPalindromeProduct', as: 'largest-palindrome-product', component: LargestPalindromeProduct},
+	{ path: '/smallestMultiple', as: 'smallest-multiple', component: SmallestMultiple },
 ])
 
 export class App {

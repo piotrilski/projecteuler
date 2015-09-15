@@ -17,6 +17,21 @@ export class LargestPrimeFactor {
 	constructor(trialDivision: TrialDivision) {
 		this.isPrime = false;
 		this._trialDivision = trialDivision;
+		
+		let i = 2;
+		let attemptCount = 0;
+		
+		// while(true) {
+		// 	if(this._trialDivision.isPrime(i)) {
+		// 		attemptCount++;
+		// 	}
+		// 	if(attemptCount == 10001)
+		// 		break;
+			
+		// 	i++;
+		// }
+		
+		// console.log(i);
 	}
 	
 	isNumberPrime(givenNumber: number) {		

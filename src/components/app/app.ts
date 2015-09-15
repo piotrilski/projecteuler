@@ -7,6 +7,7 @@ import { FibonacciEvenNumbers } from '../fibonacciEvenNumbers/fibonacciEvenNumbe
 import { LargestPrimeFactor } from '../largestPrimeFactor/largestPrimeFactor';
 import { LargestPalindromeProduct } from '../largestPalindromeProduct/largestPalindromeProduct';
 import { SmallestMultiple } from '../smallestMultiple/smallestMultiple';
+import { SumSquareDifference } from '../sumSquareDifference/sumSquareDifference';
 
 @Component({
 	selector: 'app'
@@ -25,6 +26,7 @@ import { SmallestMultiple } from '../smallestMultiple/smallestMultiple';
 	{ path: '/largest-prime-factor', as: 'largest-prime-factor', component: LargestPrimeFactor},
 	{ path: '/largestPalindromeProduct', as: 'largest-palindrome-product', component: LargestPalindromeProduct},
 	{ path: '/smallestMultiple', as: 'smallest-multiple', component: SmallestMultiple },
+	{ path: '/sumSquareDifference', as: 'sum-square-difference', component: SumSquareDifference },
 ])
 
 export class App {

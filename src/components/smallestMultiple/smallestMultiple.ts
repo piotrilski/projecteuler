@@ -1,7 +1,7 @@
 import { Component, View, CORE_DIRECTIVES } from 'angular2/angular2';
 
 @Component({
-    selector: 'smallestMultiple',
+    selector: 'smallest-multiple',
 })
 @View({	
     templateUrl: './components/smallestMultiple/smallestMultiple.html'

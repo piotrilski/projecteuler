@@ -19,17 +19,18 @@ export class TrialDivision implements IPrimeNumberService{
 		}
 		
 		let roundedSqrtOfGivenNumber = Math.ceil(Math.sqrt(givenNumber));		
-		
+		let ret = true;
 		for(let factor = 3; factor <= roundedSqrtOfGivenNumber; factor++) {
 			let testOutput = givenNumber / factor;
 			
 			if(testOutput % 1 === 0) {
+				console.log("R");
 				return false;
 			}
 		}	
 			
 		this.primeNumbers.push(givenNumber);
-		
+		console.log("R2");
 		return true;
 	}
 }
